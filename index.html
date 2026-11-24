@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="sr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Rista Dev – Web developer &amp; dizajner</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#fff;--fg:#141414;--mute:#6b6b6b;--line:#d9d9d9;--btn:#141414;--btnfg:#fff;--accent:#e6247a;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media(prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0f0f0f;--fg:#f4f4f4;--mute:#9a9a9a;--line:#333;--btn:#f4f4f4;--btnfg:#141414}}
+:root[data-theme="dark"]{--bg:#0f0f0f;--fg:#f4f4f4;--mute:#9a9a9a;--line:#333;--btn:#f4f4f4;--btnfg:#141414}
+*{box-sizing:border-box;margin:0}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--fg);font-family:Inter,system-ui,sans-serif;line-height:1.5}
+.wrap{max-width:1100px;margin:0 auto;padding:0 24px}
+nav{display:flex;justify-content:space-between;align-items:center;padding:24px 0}
+.logo{font-family:Anton,Impact,sans-serif;font-size:28px;text-decoration:none;color:var(--fg)}
+.logo i{color:var(--accent);font-style:normal}
+nav ul{display:flex;gap:28px;list-style:none;align-items:center;font-size:14px}
+nav a{color:var(--fg);text-decoration:none}
+.btn{display:inline-block;padding:10px 18px;border-radius:6px;background:var(--btn);color:var(--btnfg)!important;font-size:14px}
+.btn.o{background:transparent;color:var(--fg)!important;border:1px solid var(--fg)}
+.hero{text-align:center;padding:48px 0 0;position:relative}
+.hi{color:var(--mute);font-size:18px}
+h1{font-family:Anton,Impact,sans-serif;font-weight:400;line-height:.95;letter-spacing:-.01em;font-size:clamp(56px,13vw,150px);margin-top:12px}
+h1 .out{display:block;color:transparent;-webkit-text-stroke:1.5px var(--fg)}
+.photo{position:absolute;left:50%;bottom:0;transform:translateX(-50%);width:clamp(180px,26vw,290px);aspect-ratio:3/4;
+background:radial-gradient(circle at 50% 30%,#bbb 0 22%,transparent 23%),linear-gradient(#888,#444);border-radius:140px 140px 0 0;
+-webkit-mask-image:linear-gradient(#000 70%,transparent);mask-image:linear-gradient(#000 70%,transparent);filter:grayscale(1)}
+.heroBox{position:relative;padding-bottom:0}
+.meta{display:flex;justify-content:space-between;align-items:flex-end;padding:40px 0 56px;gap:16px;position:relative;z-index:2}
+.meta p{color:var(--mute);font-size:15px;text-align:left}
+.cta{display:flex;gap:12px;flex-wrap:wrap;justify-content:center;position:relative;z-index:2;padding-bottom:64px}
+section{padding:72px 0;border-top:1px solid var(--line)}
+h2{font-family:Anton,Impact,sans-serif;font-weight:400;font-size:clamp(36px,6vw,64px);margin-bottom:32px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:20px}
+.card{border:1px solid var(--line);border-radius:12px;padding:24px}
+.card .th{height:140px;border-radius:8px;margin-bottom:16px;background:linear-gradient(135deg,var(--fg),var(--mute));opacity:.85}
+.card h3{font-size:18px;font-weight:500}
+.card p{color:var(--mute);font-size:14px;margin-top:6px}
+.tags{display:flex;flex-wrap:wrap;gap:10px}
+.tags span{border:1px solid var(--line);border-radius:99px;padding:6px 14px;font-size:14px}
+footer{padding:64px 0 48px;text-align:center}
+footer a.big{font-family:Anton,Impact,sans-serif;font-size:clamp(32px,7vw,80px);color:var(--fg);text-decoration:none}
+footer small{display:block;margin-top:24px;color:var(--mute)}
+@media(max-width:640px){nav ul li:not(:last-child){display:none}.meta{flex-direction:column;align-items:center;text-align:center}.photo{opacity:.35}}
+</style>
+</head>
+<body>
+<div class="wrap">
+<nav>
+<a class="logo" href="#">Rista<i>.</i></a>
+<ul><li><a href="#radovi">Radovi</a></li><li><a href="#usluge">Usluge</a></li><li><a href="#kontakt" class="btn">hello@ristadev.com</a></li></ul>
+</nav>
+
+<header class="hero">
+<p class="hi">👋 Zdravo, ja sam Rista i frilens sam</p>
+<div class="heroBox">
+<h1>Web developer<span class="out">&amp; Dizajner</span></h1>
+<div class="photo" role="img" aria-label="Rista – fotografija"></div>
+</div>
+<div class="meta">
+<p>Pravim brze, čiste i<br>upečatljive sajtove.<br>Iz Srbije, za ceo svet.</p>
+<span></span>
+</div>
+<div class="cta">
+<a class="btn" href="#kontakt">Treba ti sajt</a>
+<a class="btn o" href="#radovi">Pogledaj radove</a>
+</div>
+</header>
+
+<section id="radovi">
+<h2>Izabrani radovi</h2>
+<div class="grid">
+<div class="card"><div class="th"></div><h3>Restoran sajt</h3><p>Tamni, elegantan sajt sa menijem i rezervacijama.</p></div>
+<div class="card"><div class="th"></div><h3>Brend jakni</h3><p>Prodajna landing stranica sa fokusom na proizvod.</p></div>
+<div class="card"><div class="th"></div><h3>Kafeterija</h3><p>Topla, minimalna prezentacija za lokalni biznis.</p></div>
+</div>
+</section>
+
+<section id="usluge">
+<h2>Šta radim</h2>
+<div class="tags"><span>Web dizajn</span><span>Frontend razvoj</span><span>Landing stranice</span><span>Responzivni sajtovi</span><span>Animacije</span><span>SEO osnove</span></div>
+</section>
+</div>
+
+<footer id="kontakt">
+<div class="wrap">
+<p style="color:var(--mute)">Hajde da radimo zajedno</p>
+<a class="big" href="mailto:hello@ristadev.com">hello@ristadev.com</a>
+<small>© 2026 Rista Dev</small>
+</div>
+</footer>
+</body>
+</html>
